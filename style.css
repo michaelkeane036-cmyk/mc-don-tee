@@ -544,6 +544,7 @@ ul  { list-style: none; }
 }
 
 .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+.hero-buttons a { flex: 1 1 0; text-align: center; }
 
 .hero-socials { display: flex; gap: 12px; align-items: center; }
 .hero-socials a {
@@ -2251,7 +2252,7 @@ textarea.field-prefilled {
 ══════════════════════════════════════════ */
 @media (max-width: 480px) {
   .section-heading    { font-size: 1.75rem; }
-  .hero-buttons       { flex-direction: column; align-items: center; }
+  .hero-buttons       { flex-direction: column; align-items: stretch; max-width: 280px; margin-left: auto; margin-right: auto; }
   .hero-badge         { display: none; }
   .stat-number,
   .stat-word          { font-size: 2.8rem; }
