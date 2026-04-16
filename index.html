@@ -16,7 +16,7 @@
   <!-- Font preconnect for faster load -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow+Semi+Condensed:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -156,35 +156,24 @@
 
   <!-- ══════════ HERO ══════════ -->
   <section class="hero" id="home">
-    <div class="hero-orb orb-1"></div>
-    <div class="hero-orb orb-2"></div>
-    <div class="hero-orb orb-3"></div>
-    <div class="hero-orb orb-4"></div>
-    <div class="deco deco-tri-1"></div>
-    <div class="deco deco-tri-2"></div>
-    <div class="deco deco-tri-3"></div>
-    <div class="deco deco-arrow-1"></div>
-    <div class="deco deco-arrow-2"></div>
-    <div class="deco deco-arrow-3"></div>
-    <div class="deco deco-dot-grid"></div>
-    <div class="deco deco-dot-grid-2"></div>
-    <div class="deco deco-circle-1"></div>
-    <div class="deco deco-circle-2"></div>
-    <div class="deco deco-ring-1"></div>
-    <div class="deco deco-diamond-1"></div>
-    <div class="deco deco-diamond-2"></div>
-    <div class="deco deco-line-1"></div>
-    <div class="deco deco-line-2"></div>
 
+    <!-- Full-bleed background video -->
+    <video class="hero-bg-video" autoplay muted loop playsinline poster="heroimage.jpg">
+      <source src="HeroVidd.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Overlay: transparent left (MC visible) → dark right (text readable) -->
+    <div class="hero-video-overlay" aria-hidden="true"></div>
+
+    <!-- Text — right half -->
     <div class="hero-container">
       <div class="hero-text fade-in">
-        <span class="hero-greeting">Hi There,</span>
+        <span class="hero-greeting">Hi, I'm</span>
         <h1 class="hero-headline">
-          <span class="hl-prefix">I'm</span>
           <span class="hl-mc">MC</span>
           <span class="hl-name">Don Tee</span>
         </h1>
-        <p class="hero-sub">Host &nbsp;·&nbsp; Compere &nbsp;·&nbsp; TV Presenter &nbsp;·&nbsp; Traveling MC<span class="hero-cursor" aria-hidden="true"></span></p>
+        <p class="hero-sub">Host &nbsp;·&nbsp; Compere &nbsp;·&nbsp; TV Presenter<span class="hero-cursor" aria-hidden="true"></span></p>
         <div class="hero-buttons">
           <a href="#about"   class="btn-outline-plum">Learn More</a>
           <a href="#contact" class="btn-plum">Book Me</a>
@@ -195,34 +184,30 @@
           <a href="https://www.tiktok.com/@donteebaltimore" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg class="icon icon-sm"><use href="#icon-tiktok"/></svg></a>
         </div>
       </div>
-      <div class="hero-photo-wrap fade-in delay-1">
-        <img src="heroimage.jpg" alt="MC Don Tee" class="hero-photo-img" />
-        <!-- Corner brackets -->
-        <div class="photo-corner pc-tl" aria-hidden="true"></div>
-        <div class="photo-corner pc-tr" aria-hidden="true"></div>
-        <div class="photo-corner pc-bl" aria-hidden="true"></div>
-        <div class="photo-corner pc-br" aria-hidden="true"></div>
-        <!-- Rotating badge -->
-        <div class="hero-badge" aria-hidden="true">
-          <svg viewBox="0 0 130 130" class="hero-badge-svg">
-            <defs>
-              <path id="badge-path" d="M65,65 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/>
-            </defs>
-            <text class="badge-text">
-              <textPath href="#badge-path">AVAILABLE FOR BOOKING &nbsp;•&nbsp; MC DON TEE &nbsp;•&nbsp; </textPath>
-            </text>
-          </svg>
-          <div class="hero-badge-center">
-            <svg class="icon" width="20" height="20"><use href="#icon-mic"/></svg>
-          </div>
-        </div>
+    </div>
+
+    <!-- Rotating badge — floats bottom-right over video -->
+    <div class="hero-badge" aria-hidden="true">
+      <svg viewBox="0 0 130 130" class="hero-badge-svg">
+        <defs>
+          <path id="badge-path" d="M65,65 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/>
+        </defs>
+        <text class="badge-text">
+          <textPath href="#badge-path">AVAILABLE FOR BOOKING &nbsp;•&nbsp; MC DON TEE &nbsp;•&nbsp; </textPath>
+        </text>
+      </svg>
+      <div class="hero-badge-center">
+        <svg class="icon" width="20" height="20"><use href="#icon-mic"/></svg>
       </div>
     </div>
 
-    <!-- Scroll indicator -->
-    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-      <svg class="icon" width="24" height="24"><use href="#icon-chevron-down"/></svg>
-    </a>
+    <!-- Booking Ticker -->
+    <div class="hero-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>AVAILABLE FOR BOOKING &nbsp;·&nbsp; CORPORATE EVENTS &nbsp;·&nbsp; WEDDINGS &nbsp;·&nbsp; CONCERTS &nbsp;·&nbsp; TV PRESENTING &nbsp;·&nbsp; INTERNATIONAL SHOWS &nbsp;·&nbsp;</span>
+        <span>AVAILABLE FOR BOOKING &nbsp;·&nbsp; CORPORATE EVENTS &nbsp;·&nbsp; WEDDINGS &nbsp;·&nbsp; CONCERTS &nbsp;·&nbsp; TV PRESENTING &nbsp;·&nbsp; INTERNATIONAL SHOWS &nbsp;·&nbsp;</span>
+      </div>
+    </div>
   </section>
 
   <!-- ══════════ ABOUT ══════════ -->
@@ -235,9 +220,8 @@
         <span class="section-tag">About Me</span>
         <h2 class="section-heading">Who is MC Don Tee?</h2>
         <div class="gold-bar"></div>
-        <p>Olaniyi Tabi, popularly known as <strong>MC Don Tee</strong>, is a highly experienced host, compere, and TV show presenter with over 20 years in the entertainment industry. A true professional in his craft, he is known for his confidence, energy, and ability to connect effortlessly with any audience.</p>
-        <p>As a versatile and knowledgeable entertainer, MC Don Tee has built a strong reputation for excellence, delivering outstanding performances at events of all kinds. He is also a seasoned traveling MC who has traveled around the world, bringing life, class, and excitement to stages across different countries and cultures.</p>
-        <p>With his vast experience and dynamic presence, MC Don Tee continues to stand out as a trusted and respected voice in hosting and presentation.</p>
+        <p>Olaniyi Tabi, known as <strong>MC Don Tee</strong>, is a host, compere, and TV presenter with 20+ years in entertainment. Known for his energy, confidence, and ability to command any room.</p>
+        <p>A seasoned traveling MC, he has performed at events across the globe, bringing life, class, and excitement to stages in different countries and cultures.</p>
         <a href="#contact" class="btn-amber mt-2">Book Me Now</a>
       </div>
     </div>
@@ -306,7 +290,7 @@
           <svg class="icon icon-vm"><use href="#icon-eye"/></svg>
         </div>
         <h3 class="vm-heading">My Vision</h3>
-        <p>My vision as MC Don Tee is to inspire people through energy, excellence, and consistency while building a brand that creates memorable experiences and lasting impact.</p>
+        <p>To inspire through energy, excellence, and consistency — building a brand that creates memorable experiences and lasting impact.</p>
       </div>
       <div class="vm-divider"></div>
       <div class="vm-card fade-in delay-1">
@@ -314,7 +298,7 @@
           <svg class="icon icon-vm"><use href="#icon-target"/></svg>
         </div>
         <h3 class="vm-heading">My Mission</h3>
-        <p>My mission as MC Don Tee is to create unforgettable event experiences through professionalism, energy, and excellence. I am committed to engaging audiences, representing every occasion with class, and delivering every performance with skill and impact.</p>
+        <p>To create unforgettable event experiences through professionalism, energy, and excellence — engaging every audience with class and real impact.</p>
       </div>
     </div>
   </section>
@@ -389,7 +373,7 @@
         <span class="section-tag">In Action</span>
         <h2 class="section-heading light">Watch Me Work</h2>
         <div class="gold-bar center-bar"></div>
-        <p class="showreel-sub">Experience the energy, the command, and the presence that keeps clients coming back.</p>
+        <p class="showreel-sub">The energy. The command. The presence.</p>
       </div>
       <div class="showreel-videos fade-in delay-1">
 
@@ -434,8 +418,7 @@
         <span class="section-tag">The Stage</span>
         <h2 class="section-heading">Moments That Matter</h2>
         <div class="gold-bar"></div>
-        <p>Every event tells a story, and MC Don Tee makes sure that story is one people never forget. From the opening line to the final farewell, he fills every room with electricity, laughter, and an atmosphere that leaves audiences wanting more.</p>
-        <p>Whether it's a grand arena or an intimate VIP gathering, the energy is always the same: world-class, commanding, and deeply memorable.</p>
+        <p>Every event tells a story. From the opening line to the final farewell, MC Don Tee fills every room with electricity, laughter, and an atmosphere audiences never forget.</p>
         <a href="#contact" class="btn-amber mt-2">Book an Event</a>
       </div>
     </div>

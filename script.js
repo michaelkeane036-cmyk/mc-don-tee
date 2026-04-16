@@ -87,17 +87,17 @@ fadeEls.forEach(el => fadeObserver.observe(el));
   const mc      = document.querySelector('.hl-mc');
   const name    = document.querySelector('.hl-name');
 
-  if (!prefix || !mc || !name) return;
+  if (!mc || !name) return;
 
   if (reduced) {
-    [prefix, mc, name].forEach(el => el.classList.add('revealed'));
+    [prefix, mc, name].filter(Boolean).forEach(el => el.classList.add('revealed'));
     return;
   }
 
-  // Staggered: prefix → mc → name → underline draws via CSS transition-delay
-  setTimeout(() => prefix.classList.add('revealed'), 320);
-  setTimeout(() => mc.classList.add('revealed'),     540);
-  setTimeout(() => name.classList.add('revealed'),   700);
+  // Staggered: prefix (optional) → mc → name → underline draws via CSS transition-delay
+  if (prefix) setTimeout(() => prefix.classList.add('revealed'), 320);
+  setTimeout(() => mc.classList.add('revealed'),   540);
+  setTimeout(() => name.classList.add('revealed'), 700);
 })();
 
 /* ── Stat counter animation ─────────────── */
