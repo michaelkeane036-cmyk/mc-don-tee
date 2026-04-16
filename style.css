@@ -2197,6 +2197,81 @@ textarea.field-prefilled {
   animation: iconWiggle 0.6s ease forwards;
 }
 
+/* ══════════════════════════════════════════
+   LIGHT SECTIONS — warm parchment
+   #F7F3EE bg · warm dark text · amber gold accent
+   About + Testimonials only
+══════════════════════════════════════════ */
+
+/* ── Shared overrides for both light sections ── */
+.about,
+.testimonials {
+  background: #F7F3EE;
+}
+.about .section-tag,
+.testimonials .section-tag {
+  color: var(--gold-orange);        /* amber reads as gold on cream, vivid yellow would look neon */
+}
+.about .section-heading,
+.testimonials .section-heading {
+  color: #1C1006;                   /* warm near-black — not cold grey */
+}
+.about .gold-bar,
+.testimonials .gold-bar {
+  background: linear-gradient(90deg, var(--gold-orange), var(--gold-vivid));
+}
+
+/* ── About — text and photo ── */
+.about-text p {
+  color: rgba(28,18,6,0.68);        /* warm dark body text */
+}
+.about-text strong {
+  color: var(--gold-orange);        /* amber emphasis on cream */
+}
+.about .about-photo-img {
+  box-shadow: 8px 14px 48px rgba(0,0,0,0.14);  /* softer on light bg */
+}
+
+/* ── About button — dark fill on light section ── */
+.about .btn-amber {
+  background: #1C1006;
+  color: var(--gold-vivid);
+  border-color: var(--gold-vivid);
+}
+.about .btn-amber:hover {
+  background: var(--gold-vivid);
+  color: #1C1006;
+  box-shadow: 0 8px 26px rgba(255,215,0,0.28);
+}
+
+/* ── Testimonial cards — white on parchment ── */
+.testimonials .testi-card {
+  background: #FEFCF8;
+  border-color: rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.testimonials .testi-card:hover {
+  border-color: rgba(212,135,42,0.42);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+}
+.testimonials .testi-card > p {
+  color: rgba(28,18,6,0.65);
+}
+.testimonials .testi-author {
+  border-top-color: rgba(0,0,0,0.08);
+}
+.testimonials .testi-author strong {
+  color: #1C1006;
+}
+.testimonials .testi-author span {
+  color: var(--gold-orange);
+}
+.testimonials .testi-avatar {
+  border-color: rgba(212,135,42,0.40);
+  background-color: #F0EAE0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='8' r='4' fill='rgba(212%2C135%2C42%2C0.30)'/%3E%3Cpath d='M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8' stroke='rgba(212%2C135%2C42%2C0.30)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+}
+
 /* ── Video — subtle zoom on hover ── */
 .showreel-video-wrap:hover .showreel-video { filter: brightness(1.05); }
 
